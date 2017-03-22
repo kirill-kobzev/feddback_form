@@ -4,7 +4,7 @@
   <meta charset="utf-8">
 </head>
 <body>
-  
+      <?php echo "privet";?> 
         <strong>Ваше имя</strong><br>
         <input  name = "name" placeholder = "Введите имя" ><br>
         <strong>Ваш e-mail</strong><br>
