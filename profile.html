@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	    <link rel="stylesheet" type="text/css" href="css/profile.css">
+	    <script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+		<div id="app">
+	<header>
+	<img src="img/logo.svg" class="logo-ma">
+	<img src="img/man.svg" class="logo-man" v-on:click="menuVisible">
+	<ul v-if="this.menuflag==true">
+		<a href="profile.html">
+		<li>Профиль</li>
+		</a>
+		<li>Выйти</li>
+	</ul>
+	</header>
+
+			<div class="main">
+				<div class="block-profile">
+					<h1 class="title-profile">Мой профиль</h1>
+					<!-- <hr> -->
+				</div>
+				
+			</div>
+	<footer></footer>
+</div>
+</body>
+<script>
+	let vueApp = new Vue({
+		el: '#app',
+		data:{
+			menuflag: false,
+		},
+		methods:{
+			menuVisible: function(){
+				console.log('qwe');
+				this.menuflag = !this.menuflag;
+			}
+		}
+	})
+</script>
+</html>
+
+body{
+	margin: 0px;
+}
+
+header{
+	width: auto;
+	height: 10vh;
+	display: flex;
+	justify-content: space-between;
+}
+
+footer{
+	width: auto;
+	height:15vh;
+	background-color: #4663AE;
+	/*border: 2px #4663AE solid;*/
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	top: 80px;
+	right: 80px;
+	position: fixed;
+	/*display: none;*/
+}
+li{
+	display: block;
+	width: 200px;
+	height: 30px;
+	background: #4663AE;
+	cursor: pointer;
+	color: white;
+	padding: 0 20px;
+	line-height: 30px;
+	font-family: Open Sans,Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	border: 1px solid #ebeef5;
+	border-radius: 4px;
+	box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+
+}
+
+li:hover{
+	background: #89D73E;
+}
+
+a{
+	text-decoration: none;
+}
+
+.main{
+	/*margin-top: 25px;*/
+	width: auto;
+	height: 400px;
+	display: flex;
+	justify-content: space-between;
+	min-height: calc(100vh - 25vh);
+}
+
+.col1{
+ 	flex: 0 0 20vw;
+	/*border: 2px #4663AE solid;*/
+}
+.col2{
+	flex: 1;
+	/*border: 2px #4663AE solid;*/
+}
+.col3{
+	flex: 0 0 20vw;
+	/*border: 2px #4663AE solid;*/
+}
+
+.logo-ma{
+	width: 200px;
+	margin-left: 40px;
+	margin-top: 25px;
+}
+
+.logo-man{
+	width: 50px;
+	margin-right: 170px;
+	margin-top: 25px;
+	cursor: pointer;
+}
+
+
